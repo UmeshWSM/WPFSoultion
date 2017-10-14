@@ -1,0 +1,19 @@
+﻿<Window x:Class="WPFDemoApp.Brush.ButtonBrushWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFDemoApp.Brush"
+        mc:Ignorable="d"
+        Title="ButtonBrushWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Content="This is first Button" Height="45" Background="{StaticResource LinearBrush1}"></Button>
+        <Button Grid.Row="1" Content="This is Second Button" Height="45" Background="{StaticResource RadialBrush1}"></Button>
+        <Button Grid.Row="2" Content="This is Third Button" Height="45" Background="{StaticResource ALinearBrush1}"></Button>
+    </Grid>
+</Window>

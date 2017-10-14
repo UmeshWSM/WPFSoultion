@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPFDemoApp.Styles.ButtonStyleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFDemoApp.Styles"
+        mc:Ignorable="d"
+        Title="ButtonStyleWindow" Height="300" Width="300">
+    <StackPanel>
+        <StackPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="Arial"></Setter>
+                <Setter Property="FontSize" Value="12"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                            <GradientStop Color="Cyan" Offset="0"/>
+                            <GradientStop Color="Blue" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </StackPanel.Resources>
+        <Button>This Is first Button</Button>
+        <Button Height="30" Width="200" Foreground="Red">This Is Second Button</Button>
+        <Button Style="{StaticResource DButtonstyle}">This Is Third Button</Button>
+        <Button>This Is Fourth Button</Button>
+    </StackPanel>
+</Window>

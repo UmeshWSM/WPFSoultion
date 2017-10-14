@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Contacts>
+  <contact>
+    <Name>ABC</Name>
+    <Tel>123456</Tel>
+    <Email>abc@123.com</Email>
+  </contact>
+  <contact>
+    <Name>PQR</Name>
+    <Tel>456789</Tel>
+    <Email>PQR@123.com</Email>
+  </contact>
+  <contact>
+    <Name>XYZ</Name>
+    <Tel>789123</Tel>
+    <Email>xyz@123.com</Email>
+  </contact>
+  <contact>
+    <Name>qwe</Name>
+    <Tel>147258</Tel>
+    <Email>qwe@123.com</Email>
+  </contact>
+  <contact>
+    <Name>asd</Name>
+    <Tel>258369</Tel>
+    <Email>asd@123.com</Email>
+  </contact>
+  <contact>
+    <Name>ABC</Name>
+    <Tel>785214</Tel>
+    <Email>abc@123.com</Email>
+  </contact>
+</Contacts>

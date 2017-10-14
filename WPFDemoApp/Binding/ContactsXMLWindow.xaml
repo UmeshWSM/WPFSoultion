@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPFDemoApp.Binding.ContactsXMLWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFDemoApp.Binding"
+        mc:Ignorable="d"
+        Title="ContactsXMLWindow" Height="300" Width="400">
+    <Window.Resources>
+        <XmlDataProvider x:Key="ContactXML" Source="Contacts.xml" XPath="Contacts/contact"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource ContactXML}">
+        <Grid.Resources>
+            <DataTemplate x:Key="ContactTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <Border Style="{StaticResource CoralBorder}">
+                        <TextBlock Text="{Binding XPath=Name}" Style="{StaticResource LDisplayTextBloack}"/>
+                    </Border>
+                    <Border Style="{StaticResource BlackBorder}">
+                        <TextBlock Text="{Binding XPath=Tel}" Style="{StaticResource RDisplayTextBloack}"></TextBlock>
+                    </Border>
+                    <Border Style="{StaticResource CoralBorder}">
+                        <TextBlock Text="{Binding XPath=Email}" Style="{StaticResource LDisplayTextBloack}" TextAlignment="Center"></TextBlock>
+                    </Border>
+                </StackPanel>
+            </DataTemplate>
+        </Grid.Resources>
+        <ListBox Margin="10" ItemsSource="{Binding}" ItemTemplate="{StaticResource ContactTemplate}"/>
+    </Grid>
+</Window>
